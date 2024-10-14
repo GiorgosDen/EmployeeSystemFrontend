@@ -1,50 +1,18 @@
-# React + TypeScript + Vite
+# EmployeeSystemFront
+This repository has the React page from the Employee System project. The Employee System project represents a simple app to manage the employees of a company, and this repository has the frontend program where the user can interact with the system, but without the 2 other parts this "page" is useless.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About Front
+This project was developed in Visual Studio Code using the Vite with typescript. The page is not a big deal, but it serves the main goal which is the provide a functional page to use APIs from Back, that interact with the database. In other words, this repository has a page which is a piece of a bigger project. 
 
-Currently, two official plugins are available:
+This page has been used  by 3 user types: The Director, the Assistant, and the User. These roles have a hierarchy with the Director on top, after the Assistant, and at the end the User. When a user logs in, has 2 minutes to manage the employees until must re-login again. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The System's functions in association with the roles are:
+View Employee List: Every user has the permission
+Add a new Employee: The Director and Assistant have the permission
+Update an existing Employee: The Director and Assistant have permission
+Delete an existing Employee: Only the Director has permission
 
-## Expanding the ESLint configuration
+The page runs locally at the address: http://localhost:5173/.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Notes
+The system has some imperfections as the timer which stops if the user changes the page and allows to add freely employee data, but these issues will be fixed soon.
